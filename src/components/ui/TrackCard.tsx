@@ -8,6 +8,7 @@ import {
 } from 'react-icons/fa';
 import { ITrack } from '@/types';
 import { getImageUrl, cn } from '@/utils';
+import { AddToQueueButton } from './AddToQueueButton';
 
 interface TrackCardProps {
   track: ITrack;
@@ -105,22 +106,32 @@ export const TrackCard: React.FC<TrackCardProps> = ({
             "absolute inset-0 flex items-center justify-center transition-all duration-300",
             isHovered ? "opacity-100 scale-100" : "opacity-0 scale-90"
           )}>
-            <Button
-              onClick={handlePlayClick}
-              variant="ghost"
-              size="icon"
-              className={cn(
-                "w-14 h-14 rounded-full shadow-xl transition-all duration-200",
-                "bg-accent-orange hover:bg-accent-orange/90",
-                "hover:scale-110 text-white"
-              )}
-            >
-              {isPlaying ? (
-                <FaPause className="w-6 h-6 ml-0.5" />
-              ) : (
-                <FaPlay className="w-6 h-6 ml-1" />
-              )}
-            </Button>
+            <div className="flex items-center space-x-2">
+              <Button
+                onClick={handlePlayClick}
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "w-14 h-14 rounded-full shadow-xl transition-all duration-200",
+                  "bg-accent-orange hover:bg-accent-orange/90",
+                  "hover:scale-110 text-white"
+                )}
+              >
+                {isPlaying ? (
+                  <FaPause className="w-6 h-6 ml-0.5" />
+                ) : (
+                  <FaPlay className="w-6 h-6 ml-1" />
+                )}
+              </Button>
+              
+              {/* Add to Queue Button */}
+              <AddToQueueButton 
+                track={track} 
+                variant="icon" 
+                size="md"
+                className="w-12 h-12 bg-white/90 hover:bg-white text-gray-700 hover:text-blue-600 shadow-lg"
+              />
+            </div>
           </div>
 
 

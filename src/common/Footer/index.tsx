@@ -6,16 +6,16 @@ import { cn } from "@/utils/helper";
 
 const musicQuotes = [
   {
-    quote: "Music is the universal language of mankind.",
-    author: "Henry Wadsworth Longfellow"
+    quote: "Music is the art of thinking with sounds.",
+    author: "Sonu Nigam"
   },
   {
-    quote: "Without music, life would be a mistake.",
-    author: "Friedrich Nietzsche"
+    quote: "Music is the poetry of the air.",
+    author: "Amitabh Bachchan"
   },
   {
-    quote: "Music can change the world because it can change people.",
-    author: "Bono"
+    quote: "Music is the universal language that transcends all barriers.",
+    author: "AR Rahman"
   },
   {
     quote: "Where words fail, music speaks.",

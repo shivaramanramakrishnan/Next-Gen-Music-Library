@@ -13,6 +13,35 @@ A music discovery app built with React and TypeScript. <br/> Browse tracks, albu
 <br/>
 <br/>
 
+## Features
+
+### 🎵 Music Discovery & Playback
+- **Smart Audio Player**: Full-featured music player with play/pause, seek, volume control
+- **Queue Management**: Add tracks to queue, reorder, remove, and manage playback order
+- **Mini Player**: Persistent mini player that stays accessible while browsing
+- **Playback Controls**: Shuffle, repeat (off/one/all), skip previous/next
+- **Track Information**: Display album artwork, artist names, track duration, and metadata
+
+### 🔍 Search & Navigation
+- **Command Palette**: Powerful search interface (⌘+K / Ctrl+K) for quick navigation
+- **Real-time Search**: Search tracks, albums, and artists with live results
+- **Keyboard Shortcuts**: Full keyboard navigation support
+- **Smart Recommendations**: Context-aware suggestions and recent items
+
+### 🎨 User Interface
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Dark/Light Themes**: Multiple theme options with smooth transitions
+- **Modern UI Components**: Built with Radix UI and Tailwind CSS
+- **Smooth Animations**: Framer Motion powered transitions and micro-interactions
+- **Accessibility**: Full keyboard navigation and screen reader support
+
+### 🚀 Performance & Developer Experience
+- **TypeScript**: Full type safety throughout the application
+- **State Management**: Redux Toolkit with RTK Query for efficient data fetching
+- **Testing**: Comprehensive test suite with Vitest and Playwright
+- **Mock Service Worker**: Offline-first development with realistic API mocking
+- **Hot Reload**: Fast development with Vite's lightning-fast HMR
+
 ## How it works
 
 NextSound runs in two modes depending on your setup:
@@ -28,7 +57,7 @@ Benefits:
 - Perfect for trying out the app quickly
 - No API setup required
 - Images load from Spotify CDN
-- Shows off the full UI
+- Shows off the full UI including queue system and command palette
 
 <br/>
 
@@ -38,7 +67,7 @@ If you have Spotify API credentials:
 - Real-time access to Spotify's music catalog
 - Search across millions of tracks, albums, and artists
 - Latest trending songs and new releases
-- All features available
+- All features available including live search and recommendations
 
 Requires:
 - Spotify API credentials in `.env` file
@@ -51,6 +80,26 @@ The app automatically detects which mode to use.
 
 <br/>
 
+## 🎹 Keyboard Shortcuts
+
+NextSound includes powerful keyboard shortcuts for efficient navigation:
+
+- **⌘+K / Ctrl+K**: Open command palette for quick search and navigation
+- **⌘+D / Ctrl+D**: Toggle between dark and light themes
+- **Space**: Play/pause current track (when audio player is focused)
+- **← / →**: Skip to previous/next track
+- **↑ / ↓**: Adjust volume
+- **ESC**: Close command palette or any open modal
+
+## 🎵 Using the Queue System
+
+The queue system allows you to manage your music playback:
+
+- **Add to Queue**: Click the "+" button on any track to add it to your queue
+- **Queue Panel**: Access your queue from the sidebar or mini player
+- **Reorder Tracks**: Drag and drop tracks in the queue to reorder them
+- **Remove Tracks**: Click the "×" button to remove tracks from the queue
+- **Shuffle & Repeat**: Use the shuffle and repeat controls in the mini player
 
 ## :camera: Screenshots
 
@@ -88,11 +137,15 @@ Open `http://localhost:5173` - the app works immediately with demo data.
 
 1. Create a [Spotify Developer Account](https://developer.spotify.com/) and create a new app
 2. Get your Client ID and Client Secret from the app dashboard
-3. Copy `.env.example` to `.env`:
+3. Create a `.env` file in the root directory:
    ```bash
-   cp .env.example .env
+   # On Windows (PowerShell)
+   New-Item -Path .env -ItemType File
+   
+   # On macOS/Linux
+   touch .env
    ```
-4. Add your credentials to `.env` (remove the # comments):
+4. Add your credentials to `.env`:
    ```env
    VITE_SPOTIFY_CLIENT_ID=your_client_id_here
    VITE_SPOTIFY_CLIENT_SECRET=your_client_secret_here
@@ -149,7 +202,7 @@ npm run preview
 **Missing Environment Variables**
 - **Problem:** App shows "No music data available" or API errors
 - **Solution:** Check that `.env` file exists with valid Spotify credentials
-- **Reference:** See `SPOTIFY_SETUP.md` for obtaining API credentials
+- **Reference:** Follow the "Want live Spotify data?" section above for setup guidance
 
 **Port Conflicts**
 - **Frontend (Port 5173):** Check if another Vite/dev server is running
@@ -164,7 +217,7 @@ npm run preview
 <br/>
 
 ### Getting Help
-- See `SPOTIFY_SETUP.md` for API setup guidance
+- Follow the setup instructions in the "Want live Spotify data?" section above
 - [Reach out to the NextWork community to ask your question!](https://community.nextwork.org/c/i-have-a-question/)
 
 ---

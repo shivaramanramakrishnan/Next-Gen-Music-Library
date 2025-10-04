@@ -1,0 +1,52 @@
+---
+description: Defines the brand color system for the NextSound app.
+globs: []
+alwaysApply: true
+---
+
+### NextSound Brand Color System
+- Use NextSound Light (#F8F9FA) as the primary light background color
+- Use NextSound Neutral (#1A1A1A) as the primary dark background color
+- Use NextSound Primary (#1DB954) for music playback, active states, and primary actions
+- Use NextSound Secondary (#FF6B35) for energy, creativity, and secondary actions
+- Use NextSound Accent (#8B5CF6) for premium features and special highlights
+- Use NextSound Success (#10B981) for success states and positive feedback
+- Use NextSound Warning (#F59E0B) for warnings and queue management
+- Use NextSound Error (#EF4444) for errors and stop states
+- Use NextSound Info (#3B82F6) for informational elements and secondary links
+
+### Color Usage Guidelines
+- Apply accent colors sparingly (10-20% of total UI) to maintain visual balance
+- Use high contrast combinations: NextSound Light with dark text, NextSound Neutral with light text
+- Use NextSound Primary for music playback controls, active states, and primary buttons
+- Use NextSound Secondary for energy-related actions and creative features
+- Use NextSound Accent for premium features and special highlights
+- Implement proper color accessibility with sufficient contrast ratios (WCAG AA minimum)
+- Use the color palette consistently across all components and pages
+- Create semantic color mappings: success (NextSound Success), warning (NextSound Warning), error (NextSound Error), info (NextSound Info)
+
+### Dark/Light Theme Implementation
+- Use NextSound Neutral as the primary dark theme background
+- Use NextSound Light as the primary light theme background
+- Implement smooth transitions between theme colors using CSS transitions
+- Use proper color inheritance for nested components
+- Ensure all text maintains proper contrast in both themes
+- Use NextSound brand colors consistently across both light and dark themes
+
+### Component-Specific Color Rules
+- **Buttons**: Use NextSound Primary for primary actions, NextSound Secondary for secondary actions
+- **Cards**: Use subtle NextSound Neutral borders and backgrounds for depth
+- **Progress bars**: Use NextSound Primary for loading states, NextSound Success for completion
+- **Status indicators**: Use NextSound Warning for warnings, NextSound Success for success, NextSound Error for errors
+- **Links**: Use NextSound Info for standard links, NextSound Primary for important links
+- **Music player controls**: Use NextSound Primary for play buttons, NextSound Warning for pause buttons
+- **Queue items**: Use NextSound Primary for current track, subtle NextSound Neutral for hover states
+- **Search results**: Use NextSound Accent for highlighting and selection states
+
+### Accessibility & Contrast
+- Ensure minimum 4.5:1 contrast ratio for normal text
+- Ensure minimum 3:1 contrast ratio for large text
+- Test color combinations with color blindness simulators
+- Use color plus other visual indicators (icons, shapes) for important information
+- Implement proper focus states with high contrast colors
+- Use semantic color names in CSS custom properties for maintainability

@@ -12,7 +12,26 @@
 
     --breakpoint-xs: 380px;
 
-    /* Modern Music App Color Palette */
+    /* NextSound Brand Color Palette */
+    --nextsound-primary: #1DB954;        /* Spotify Green - Music industry standard */
+    --nextsound-secondary: #FF6B35;      /* Vibrant Orange - Energy & creativity */
+    --nextsound-accent: #8B5CF6;         /* Purple - Premium features */
+    --nextsound-neutral: #1A1A1A;        /* Deep charcoal - Sophisticated dark */
+    --nextsound-light: #F8F9FA;          /* Clean white - Modern minimalism */
+    
+    /* Semantic Colors */
+    --nextsound-success: #10B981;        /* Emerald - Play, success states */
+    --nextsound-warning: #F59E0B;        /* Amber - Pause, warnings */
+    --nextsound-error: #EF4444;          /* Red - Stop, errors */
+    --nextsound-info: #3B82F6;           /* Blue - Info, secondary actions */
+    
+    /* Music-Specific Colors */
+    --nextsound-playing: #1DB954;        /* Active playback */
+    --nextsound-paused: #6B7280;         /* Paused state */
+    --nextsound-loading: #8B5CF6;        /* Loading/buffering */
+    --nextsound-queue: #F59E0B;          /* Queue management */
+    
+    /* Legacy colors for compatibility */
     --color-spotify-green: #1DB954;
     --color-deep-dark: #121212;
     --color-card-dark: #1A1A1A;
@@ -31,16 +50,21 @@
     --text-color-sec-color: #E5E5E5;
     --text-color-nav-color: #9CA3AF;
 
-    /* Refined backgrounds */
-    --background-color-main-color: #FFFFFF;
+    /* NextSound Background Colors */
+    --background-color-main-color: var(--nextsound-light);
     --background-color-secondary-color: #F8FAFC;
-    --background-color-black-overlay: rgba(18, 18, 18, 0.8);
+    --background-color-black-overlay: rgba(26, 26, 26, 0.8);
 
-    /* Modern glows and shadows */
-    --shadow-spotify-glow: 0 0 20px rgb(29, 185, 84, 0.3);
-    --shadow-accent-glow: 0 0 24px rgb(255, 107, 53, 0.25);
+    /* NextSound Glows and Shadows */
+    --shadow-nextsound-primary: 0 0 20px rgba(29, 185, 84, 0.3);
+    --shadow-nextsound-secondary: 0 0 20px rgba(255, 107, 53, 0.3);
+    --shadow-nextsound-accent: 0 0 20px rgba(139, 92, 246, 0.3);
     --shadow-card-elevated: 0 8px 32px rgba(0, 0, 0, 0.12);
     --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.15);
+    
+    /* Legacy glows for compatibility */
+    --shadow-spotify-glow: 0 0 20px rgb(29, 185, 84, 0.3);
+    --shadow-accent-glow: 0 0 24px rgb(255, 107, 53, 0.25);
   }
 }
 
@@ -78,7 +102,7 @@ body {
 }
 
 .dark {
-  background-color: var(--color-deep-dark);
+  background-color: var(--nextsound-neutral);
 }
 
 body {
@@ -89,7 +113,7 @@ body {
 }
 
 .dark body {
-  background-color: var(--color-deep-dark);
+  background-color: var(--nextsound-neutral);
 }
 
 .no-scroll {

@@ -11,6 +11,9 @@ import {
   DemoModeBadge,
 } from "@/common";
 import { CommandPalette } from "@/components/ui/CommandPalette";
+import { QueuePanel } from "@/components/ui/QueuePanel";
+import { MiniPlayer } from "@/components/ui/MiniPlayer";
+import { useQueueAudioPlayer } from "@/hooks/useQueueAudioPlayer";
 
 import "react-loading-skeleton/dist/skeleton.css";
 import "swiper/css";
@@ -18,8 +21,9 @@ import "swiper/css";
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const App = () => {
+const AppContent = () => {
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
+  const queueAudioPlayer = useQueueAudioPlayer();
 
   // Debug: Log when Command Palette state changes
   useEffect(() => {
@@ -71,9 +75,36 @@ const App = () => {
         }}
       />
 
+      {/* Queue Panel */}
+      <QueuePanel />
+
+      {/* Mini Player */}
+      <MiniPlayer
+        currentTrack={queueAudioPlayer.currentTrack}
+        isPlaying={queueAudioPlayer.isPlaying}
+        progress={queueAudioPlayer.progress}
+        volume={queueAudioPlayer.volume}
+        isShuffled={queueAudioPlayer.isShuffled}
+        repeatMode={queueAudioPlayer.repeatMode}
+        onTogglePlay={queueAudioPlayer.togglePlay}
+        onSkipPrevious={queueAudioPlayer.skipPrevious}
+        onSkipNext={queueAudioPlayer.skipNext}
+        onSeek={queueAudioPlayer.seek}
+        onVolumeChange={queueAudioPlayer.setVolume}
+        onToggleShuffle={queueAudioPlayer.toggleShuffle}
+        onToggleRepeat={queueAudioPlayer.toggleRepeat}
+        onToggleFavorite={queueAudioPlayer.toggleFavorite}
+        onToggleMinimize={queueAudioPlayer.toggleMinimize}
+        isMinimized={queueAudioPlayer.isMinimized}
+      />
+
       <Footer />
     </>
   );
+};
+
+const App = () => {
+  return <AppContent />;
 };
 
 export default App;

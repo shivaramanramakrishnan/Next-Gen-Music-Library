@@ -172,7 +172,7 @@ export const MiniPlayer: React.FC<MiniPlayerProps> = ({
             />
             {/* Audio visualizer dots */}
             {isPlaying && (
-              <div className="absolute -top-1 -right-1 bg-green-500 rounded-full p-1">
+              <div className="absolute -top-1 -right-1 bg-nextsound-primary rounded-full p-1 shadow-nextsound-primary">
                 <div className="flex space-x-0.5">
                   <div className="w-0.5 h-1.5 bg-white rounded-full animate-pulse"></div>
                   <div className="w-0.5 h-1 bg-white rounded-full animate-pulse" style={{ animationDelay: '0.1s' }}></div>
