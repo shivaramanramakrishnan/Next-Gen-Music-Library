@@ -2,7 +2,7 @@
   <br/>
   <br/>
   <img src="/src/assets/svg/nextsound.svg" alt="NextSound logo" width="80" height="auto" />
-  <h1>NextSound</h1>
+  <h1>Isai</h1>
   <br/>
 
   <p >
@@ -226,3 +226,4 @@ npm run preview
   <p>Built with ❤️ for music lovers everywhere</p>
   <p>Discover your next favorite track with NextSound</p>
 </div>
+
